@@ -4,5 +4,9 @@
   "assets": 48,
   "forbidden_external_references": [],
   "missing_local_references": [],
-  "status": "corrected-live"
+  "status": "corrected-live",
+  "internal_new_tab_references": [],
+  "base_target_references": [],
+  "window_open_pages": [],
+  "navigation_status": "same-tab-corrected"
 }
