@@ -1,4 +1,5 @@
 name: Restore homepage books and layout
+# Triggered after the workflow became active on the default branch.
 
 on:
   push:
