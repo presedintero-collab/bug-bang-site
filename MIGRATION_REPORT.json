@@ -1,6 +1,8 @@
 {
   "pages": 31,
+  "public_pages": 25,
   "assets": 48,
+  "forbidden_external_references": [],
   "missing_local_references": [],
-  "status": "preview-noindex"
+  "status": "corrected-live"
 }

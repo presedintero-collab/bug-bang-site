@@ -8,13 +8,13 @@ The site is an author and book presentation website. It offers public informatio
 
 ## Main pages
 
-- Homepage: https://www.bug-bang-theory.org/
-- Library: https://www.bug-bang-theory.org/biblioteca.html
-- English BUG BANG page: https://www.bug-bang-theory.org/bug-bang-en.html
-- Romanian book page: https://www.bug-bang-theory.org/cine-sunt-eu.html
-- Romanian informational universe page: https://www.bug-bang-theory.org/cine-sunt-eu-universul-informational.html
-- English book page: https://www.bug-bang-theory.org/who-am-i-primordial-intelligence.html
-- English informational universe page: https://www.bug-bang-theory.org/who-am-i.html
+- Homepage: https://twistphysics.org/
+- Library: https://twistphysics.org/biblioteca.html
+- English BUG BANG page: https://twistphysics.org/bug-bang-en.html
+- Romanian book page: https://twistphysics.org/cine-sunt-eu.html
+- Romanian informational universe page: https://twistphysics.org/cine-sunt-eu-universul-informational.html
+- English book page: https://twistphysics.org/who-am-i-primordial-intelligence.html
+- English informational universe page: https://twistphysics.org/who-am-i.html
 
 ## Key topics
 
