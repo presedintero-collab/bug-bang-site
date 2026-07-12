@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>Axa tehnică BUG BANG — 3SOS-C, KERNEL 1.618, TTC, TSC, TPN | Theo C. Wirth</title>
+    <link rel="canonical" href="https://www.twistgeometry.org/technical-library.html">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="content-language" content="ro">
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <meta property="og:title" content="Axa tehnică BUG BANG — 3SOS-C, KERNEL 1.618, TTC, TSC, TPN | Theo C. Wirth" /><meta property="og:description" content="Biblioteca tehnică BUG BANG: 3SOS-C, KERNEL 1.618, Cyclic Twist Toroids TTC(n), Twist Spherical Cyclic TSC(n) și TPN(n) public web RO/EN." />
+  
+<script type="text/javascript">hostname = window.location.host;</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#05070d;--surface:#0b1220;--text:#f7ecd2;--muted:#c4b68f;--gold:#f5d48a;--blue:#4bb7e8;--line:rgba(245,212,138,.24);--max:min(1180px,92vw);--section:clamp(4rem,5vw + 2rem,8rem)}*{box-sizing:border-box}body{margin:0;font-family:'Libre Baskerville',serif;color:var(--text);background:radial-gradient(circle at 12% 14%,rgba(75,183,232,.16),transparent 30rem),radial-gradient(circle at 82% 10%,rgba(245,212,138,.16),transparent 28rem),var(--bg)}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.23;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.55) 0 1px,transparent 1.5px),radial-gradient(circle at 70% 20%,rgba(245,212,138,.55) 0 1px,transparent 1.4px);background-size:180px 180px,260px 260px}.container{width:var(--max);margin:0 auto;padding:0 clamp(1rem,3vw,2rem);position:relative;z-index:1}a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:10;background:rgba(5,7,13,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(245,212,138,.14)}.nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand,.nav a,h1,h2,h3,.tag,.btn,.status{font-family:Cinzel,serif}.brand{color:var(--gold);letter-spacing:.16em;font-weight:700;text-transform:uppercase}.nav-links{display:flex;gap:1rem;flex-wrap:wrap}.nav-links a{color:var(--muted);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.nav-links a:hover{color:var(--gold)}.hero{padding:clamp(5rem,8vw,9rem) 0 3rem}.eyebrow{font-family:Cinzel,serif;color:var(--blue);letter-spacing:.22em;text-transform:uppercase;font-size:.82rem;margin-bottom:1rem}h1{font-size:clamp(2.8rem,7vw,6.4rem);line-height:1.04;color:var(--gold);margin:0}h2{font-size:clamp(1.8rem,4vw,3.8rem);line-height:1.08;color:var(--gold);margin:0 0 1rem}.lead{font-size:clamp(1rem,1.2vw + .8rem,1.38rem);line-height:1.85;color:#e9dcb9;max-width:940px;margin:1.3rem 0 0}section{padding:var(--section) 0}.surface{background:linear-gradient(180deg,rgba(11,18,32,.9),rgba(5,7,13,.88));border-top:1px solid rgba(245,212,138,.1);border-bottom:1px solid rgba(245,212,138,.1)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1.15rem;margin-top:2.2rem}.paper{border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.025));box-shadow:0 22px 70px rgba(0,0,0,.24);padding:1.35rem;min-height:310px;display:flex;flex-direction:column}.paper:hover{border-color:rgba(245,212,138,.55)}.tag{color:var(--blue);letter-spacing:.15em;text-transform:uppercase;font-size:.66rem;margin-bottom:.8rem}.paper h3{font-size:1.35rem;line-height:1.2;color:var(--gold);margin:0 0 .8rem}.paper p{color:var(--muted);line-height:1.75;margin:0 0 1rem}.status{display:inline-flex;width:max-content;border:1px solid rgba(75,183,232,.32);border-radius:999px;color:#bdecff;padding:.38rem .62rem;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}.actions{margin-top:auto}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.78rem .95rem;border-radius:999px;border:1px solid var(--line);font-size:.66rem;text-transform:uppercase;letter-spacing:.07em;margin:.25rem .25rem .25rem 0}.primary{background:linear-gradient(135deg,#f5d48a,#b98d39);color:#090b10}.secondary{background:rgba(255,255,255,.05);color:var(--gold)}.matrix{display:grid;gap:.9rem;margin-top:2rem}.row{display:grid;grid-template-columns:180px 1fr 160px;gap:1rem;align-items:center;border-bottom:1px solid rgba(245,212,138,.14);padding:1rem 0}.row strong{font-family:Cinzel,serif;color:var(--gold)}.row span{color:var(--muted);line-height:1.6}.note{border-left:3px solid var(--blue);padding:1rem 1.2rem;background:rgba(75,183,232,.08);color:#e9dcb9;line-height:1.8;margin-top:2rem}footer{padding:3rem 0;border-top:1px solid rgba(245,212,138,.14);color:var(--muted);font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}@media(max-width:760px){.nav-inner{display:block;padding:1rem 0}.nav-links{margin-top:.75rem}.row{grid-template-columns:1fr}.footer-inner{display:block}}
+  </style>
+<meta name="disable-service-worker" content="true">
+<meta name="disable-service-worker" content="true">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ1QGYTL9J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HJ1QGYTL9J');
+</script>
+<meta name="googlebot" content="noindex, nofollow"><meta name="bug-bang-migration" content="github-ready-2026-07-12"></head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html">Theo C. Wirth</a><div class="nav-links"><a href="index.html">Acasă RO</a><a href="index.html">EN</a><a href="navigation.html">Start</a><a href="biblioteca.html">Biblioteca</a><a href="system-map.html">Harta sistemului</a><a href="technical-library.html">Axa tehnică</a><a href="3sos-c.html">3SOS-C</a><a href="twist-sferic-ciclic-tscn.html">TSC(n)</a><a href="cyclic-twist-toroids-ttcn.html">TTC(n)</a></div></div></nav>
+  <main>
+    <header class="hero"><div class="container"><div class="eyebrow">biblioteca tehnică</div><h1>Axa tehnică<br>BUG BANG</h1><p class="lead">Această pagină adună partea formalizabilă a ecosistemului: logica ternară, nucleul KERNEL, geometria ciclică și ramura magneto-geometrică. Tema rămâne cosmică; navigarea devine sistemică.</p></div></header>
+    <section class="surface"><div class="container"><h2>Materiale principale</h2><div class="grid"><article class="paper"><div class="tag">logică ternară</div><h3>3SOS-C</h3><span class="status">public / aproape final</span><p>Lucrare tehnică RO/EN și pachet software-first. Este cea mai bună intrare tehnică pentru cititorul care vrea reguli, stări și formalizare.</p><div class="actions"><a class="btn primary" href="3sos-c.html">Pagina 3SOS-C</a><a class="btn secondary" href="3sos-c-package.html">Pachet software</a><a class="btn secondary" href="3sos-c-en.html">EN</a></div></article><article class="paper"><div class="tag">nucleu de sinteză</div><h3>KERNEL 1.618</h3><span class="status">în dezvoltare</span><p>Integrarea dintre Golden Trit, Φ, fereastra 0.382, 3SOS-C, TTC/TSC și TPN. Nu este marcat ca final până la închiderea documentului.</p><div class="actions"><a class="btn primary" href="system-map.html">Vezi poziția în sistem</a></div></article><article class="paper"><div class="tag">geometrie toroidală</div><h3>TTC(n)</h3><span class="status">public / revizie</span><p>Cyclic Twist Toroids: model geometric ciclic cu twist și monodromie discretă, deja prezent ca ramură tehnică publică.</p><div class="actions"><a class="btn primary" href="cyclic-twist-toroids-ttcn.html">Pagina TTC(n)</a><a class="btn secondary" href="biblioteca.html">PDF în bibliotecă</a></div></article><article class="paper"><div class="tag">geometrie sferică</div><h3>TSC(n) / TSD</h3><span class="status">public / critic</span><p>Twist Spherical Cyclic: bucle ciclice închise pe sferă, cu delimitare topologică și statut de model formal.</p><div class="actions"><a class="btn primary" href="twist-sferic-ciclic-tscn.html">Pagina TSC(n)</a><a class="btn secondary" href="biblioteca.html">PDF în bibliotecă</a></div></article><article class="paper"><div class="tag">magneto-geometric</div><h3>TPN(n)</h3><span class="status">public web RO/EN</span><p>Twist Poligonal Navigabil: canal, fazare magnetică, validare Hall, prototipare liniară și documente web optimizate în română și engleză.</p><div class="actions"><a class="btn primary" href="tpn.html">Pagina TPN(n)</a><a class="btn secondary" href="https://cdn.websitepublisher.ai/custom/wid23603/files/tpn-web-ro-complet-webopt.pdf" target="_blank" rel="noopener">PDF RO</a><a class="btn secondary" href="https://cdn.websitepublisher.ai/custom/wid23603/files/tpn-web-en-complete-webopt.pdf" target="_blank" rel="noopener">PDF EN</a></div></article><article class="paper"><div class="tag">cosmic / filosofic</div><h3>BUG BANG</h3><span class="status">public</span><p>Nucleul narativ: diferență, informație, inteligență, regeneză. Tehnicul se leagă de aici, nu îl înlocuiește.</p><div class="actions"><a class="btn primary" href="biblioteca.html">Biblioteca RO</a><a class="btn secondary" href="library.html">Library EN</a></div></article></div></div></section>
+    <section><div class="container"><h2>Statut de publicare</h2><div class="matrix"><div class="row"><strong>Publicat</strong><span>BUG BANG, IP / Cine sunt eu, 3SOS-C, TSC(n), TTC(n), TPN(n)</span><span>vizibil pe site</span></div><div class="row"><strong>În lucru</strong><span>KERNEL 1.618 — document de sinteză și teză extinsă</span><span>nu final încă</span></div><div class="row"><strong>Public web</strong><span>TPN(n) — proiect tehnic, Hall/FEM, testare progresivă, versiuni RO/EN optimizate.</span><span>pagina TPN</span></div><div class="row"><strong>Următor pas</strong><span>Extindere cu eventuale date Hall reale și simulare FEM când există rezultate măsurate.</span><span>roadmap</span></div></div><div class="note"><strong>Regulă de prezentare:</strong> tot ce este filosofic rămâne cosmic și narativ; tot ce este tehnic este separat prin statut — public, în lucru, preliminar sau testabil.</div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><div>© 2026 Theo C. Wirth — BUG BANG / Informational Universe</div><div><a href="navigation.html">Start</a> · <a href="biblioteca.html">Biblioteca</a> · <a href="system-map.html">Harta sistemului</a> · <a href="technical-library.html">Axa tehnică</a></div></div></footer>
+  
+
+
+
+
+<!-- WebsitePublisher.ai Powered-by Widget -->
+<div id="wpa-widget" style="position:fixed;bottom:0;right:0;z-index:2147483647;display:flex;justify-content:flex-end;pointer-events:none;padding:0 12px 12px 0;">
+    <div style="pointer-events:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(15,15,15,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;line-height:1;color:rgba(255,255,255,0.7);box-shadow:0 2px 12px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.08);">
+        <a href="https://www.websitepublisher.ai?ref=widget" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            WebsitePublisher.ai
+        </a>
+        <span style="color:rgba(255,255,255,0.25);">&middot;</span>
+        <a href="https://www.websitepublisher.ai/report?url=https%3A%2F%2Fwww.bug-bang-theory.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:none;">Report Abuse</a>
+    </div>
+</div>
+</body>
+</html>

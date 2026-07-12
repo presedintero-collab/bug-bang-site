@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ternary Logic Software — 3SOS-C v0.8 | BUG BANG Theory</title>
+    <link rel="canonical" href="https://www.twistgeometry.org/3sos-c-software.html">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="content-language" content="en">
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <meta property="og:title" content="Ternary Logic Software — 3SOS-C v0.8 | BUG BANG Theory" /><meta property="og:description" content="3SOS-C v0.8 software package: Python core, .sos DSL, simulator, CSV/JSON export, visual truth tables and experimental HDL/Verilog generator." />
+  
+<script type="text/javascript">hostname = window.location.host;</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#05070d;--text:#f7ecd2;--muted:#c4b68f;--gold:#f5d48a;--blue:#4bb7e8;--line:rgba(245,212,138,.25);--max:min(1040px,92vw)}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 10%,rgba(75,183,232,.18),transparent 32rem),radial-gradient(circle at 80% 12%,rgba(245,212,138,.16),transparent 28rem),var(--bg);color:var(--text);font-family:'Libre Baskerville',serif;line-height:1.7}a{color:var(--gold);text-decoration:none}.container{width:var(--max);margin:auto;padding:0 clamp(1rem,3vw,2rem)}.nav{border-bottom:1px solid rgba(245,212,138,.14);background:rgba(5,7,13,.86);backdrop-filter:blur(16px);position:sticky;top:0}.nav-inner{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:1rem}.brand,.nav a,h1,h2,.btn,.tag{font-family:Cinzel,serif}.brand{letter-spacing:.16em;text-transform:uppercase;font-weight:700}.nav-links{display:flex;gap:1rem;flex-wrap:wrap}.nav-links a{color:var(--muted);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}.hero{padding:clamp(4rem,8vw,8rem) 0 2rem}.eyebrow{color:var(--blue);letter-spacing:.22em;text-transform:uppercase;font-family:Cinzel,serif;font-size:.82rem}h1{font-size:clamp(2.5rem,7vw,6rem);line-height:1.05;color:var(--gold);margin:1rem 0}.lead{font-size:clamp(1rem,1.2vw + .8rem,1.35rem);color:#e9dcb9;max-width:850px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.82rem 1.05rem;border-radius:999px;border:1px solid var(--line);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;margin:.4rem .4rem .4rem 0}.primary{background:linear-gradient(135deg,#f5d48a,#b98d39);color:#090b10}.secondary{background:rgba(255,255,255,.055);color:var(--gold)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1rem;margin:2rem 0 5rem}.card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.025));box-shadow:0 22px 70px rgba(0,0,0,.25);padding:1.4rem}.card h2{color:var(--gold);margin:.2rem 0 1rem}.card p,.card li{color:var(--muted)}.tag{display:inline-block;color:var(--blue);letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;margin-bottom:.5rem}.code{font-family:ui-monospace,Menlo,Consolas,monospace;border:1px solid rgba(75,183,232,.28);background:rgba(75,183,232,.075);border-radius:14px;padding:1rem;color:#e9f7ff;overflow:auto}footer{padding:3rem 0;border-top:1px solid rgba(245,212,138,.14);color:var(--muted);text-align:center}@media(max-width:760px){.nav-inner{display:block;padding:1rem 0}.nav-links{margin-top:.7rem}}
+  </style>
+<meta name="disable-service-worker" content="true">
+<meta name="disable-service-worker" content="true">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ1QGYTL9J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HJ1QGYTL9J');
+</script>
+<meta name="googlebot" content="noindex, nofollow"><meta name="bug-bang-migration" content="github-ready-2026-07-12"></head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html">Theo C. Virth</a><div class="nav-links"><a href="3sos-c-en.html">3SOS-C EN</a><a href="3sos-c.html">RO</a><a href="library.html">Library</a></div></div></nav>
+  <main>
+    <header class="hero"><div class="container"><div class="eyebrow">software-first technical package</div><h1>3SOS-C Software v0.8</h1><p class="lead">The v0.8 package extends the 3SOS-C software prototype with visual truth-table outputs and an experimental HDL/Verilog expansion path.</p><p><a class="btn primary" href="assets/files/3sos-c-software-v0-8.zip" target="_blank" rel="noopener">Download ZIP v0.8</a><a class="btn secondary" href="assets/files/3sos-c-en.pdf" target="_blank" rel="noopener">Read EN paper</a><a class="btn secondary" href="assets/files/3sos-c-ro.pdf" target="_blank" rel="noopener">Lucrare RO</a></p></div></header>
+    <section class="container grid"><article class="card"><span class="tag">included</span><h2>Package contents</h2><ul><li>Python core;</li><li>.sos DSL;</li><li>ternary simulator;</li><li>CSV/JSON export;</li><li>dynamic benchmark;</li><li>SVG/HTML/Markdown truth-table rendering;</li><li>experimental HDL/Verilog generator.</li></ul></article><article class="card"><span class="tag">generated outputs</span><h2>v0.8 additions</h2><div class="code">output/truth_table.svg<br>output/truth_table.html<br>output/truth_table.md<br>output/hdl/three_sosc_cell.v<br>output/hdl/three_sosc_full_adder.v<br>output/hdl/tb_three_sosc_cell.v</div></article><article class="card"><span class="tag">status</span><h2>Important limitation</h2><p>The HDL layer is experimental and intended for simulation and review. It is not a validated FPGA or ASIC implementation.</p></article></section>
+  </main>
+  <footer><div class="container">© Theodor Carciumaru ~ Doru ~ · 3SOS-C Software Package</div></footer>
+  
+
+
+
+
+<!-- WebsitePublisher.ai Powered-by Widget -->
+<div id="wpa-widget" style="position:fixed;bottom:0;right:0;z-index:2147483647;display:flex;justify-content:flex-end;pointer-events:none;padding:0 12px 12px 0;">
+    <div style="pointer-events:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(15,15,15,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;line-height:1;color:rgba(255,255,255,0.7);box-shadow:0 2px 12px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.08);">
+        <a href="https://www.websitepublisher.ai?ref=widget" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            WebsitePublisher.ai
+        </a>
+        <span style="color:rgba(255,255,255,0.25);">&middot;</span>
+        <a href="https://www.websitepublisher.ai/report?url=https%3A%2F%2Fwww.bug-bang-theory.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:none;">Report Abuse</a>
+    </div>
+</div>
+</body>
+</html>

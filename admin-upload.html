@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>Panou autor — Folder fișiere</title>
+    <link rel="canonical" href="https://www.twistgeometry.org/admin-upload.html">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="content-language" content="ro">
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta property="og:title" content="Panou autor — Folder fișiere" /><meta property="og:description" content="Pagină privată nelistată pentru vizualizarea fișierelor încărcate și verificarea PDF-urilor locale." />
+  
+<script type="text/javascript">hostname = window.location.host;</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#05070d;--surface:#0b1220;--text:#f7ecd2;--muted:#c4b68f;--gold:#f5d48a;--blue:#4bb7e8;--green:#9ff0c5;--red:#ffb1a1;--line:rgba(245,212,138,.25);--max:min(1120px,94vw)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:'Libre Baskerville',serif;color:var(--text);background:radial-gradient(circle at 18% 10%,rgba(75,183,232,.18),transparent 32rem),radial-gradient(circle at 80% 8%,rgba(245,212,138,.16),transparent 26rem),var(--bg)}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.55) 0 1px,transparent 1.5px),radial-gradient(circle at 70% 20%,rgba(245,212,138,.55) 0 1px,transparent 1.4px);background-size:180px 180px,260px 260px}
+    a{color:var(--gold);text-decoration:none}.wrap{width:var(--max);margin:0 auto;padding:clamp(1.3rem,4vw,4rem) clamp(.85rem,3vw,2rem);position:relative;z-index:1}
+    .top{display:flex;justify-content:space-between;gap:1rem;align-items:center;margin-bottom:clamp(1.4rem,4vw,3rem);flex-wrap:wrap}.brand,.btn,h1,h2,h3,.pill,.badge{font-family:Cinzel,serif}.brand{color:var(--gold);letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-size:.92rem}.small{color:var(--muted);font-size:.86rem}
+    .hero,.panel{border:1px solid var(--line);border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.025));box-shadow:0 22px 80px rgba(0,0,0,.32);padding:clamp(1.15rem,3vw,2.25rem);margin-bottom:1.1rem}
+    .eyebrow{font-family:Cinzel,serif;color:var(--blue);letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;margin-bottom:.8rem}h1{font-size:clamp(2.05rem,6vw,4.6rem);line-height:1.04;color:var(--gold);margin:0 0 1rem}h2{font-size:clamp(1.25rem,3vw,2rem);color:var(--gold);margin:.1rem 0 1rem}.lead{line-height:1.85;color:#e9dcb9;max-width:860px;margin:0}
+    .big-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.3rem}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;border-radius:999px;border:1px solid var(--line);padding:.95rem 1.15rem;background:linear-gradient(135deg,#f5d48a,#b98d39);color:#090b10;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.74rem;cursor:pointer}.btn.secondary{background:rgba(255,255,255,.055);color:var(--gold)}.btn.blue{background:linear-gradient(135deg,#4bb7e8,#235b80);color:#f7ecd2}.btn:focus-visible,.asset-open:focus-visible,.copy:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+    .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.8rem;margin-top:1rem}.tile{border:1px solid rgba(245,212,138,.16);border-radius:20px;background:rgba(255,255,255,.045);padding:1rem;min-height:112px}.tile strong{display:block;color:var(--gold);font-family:Cinzel,serif;font-size:1.05rem;margin-bottom:.45rem}.tile span{color:var(--muted);line-height:1.65;font-size:.92rem}.bar{height:14px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:.75rem}.bar>i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#4bb7e8,#f5d48a);border-radius:999px}
+    .folder-title{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.85rem}.pill{display:inline-flex;align-items:center;gap:.4rem;border:1px solid rgba(75,183,232,.28);border-radius:999px;padding:.55rem .8rem;color:#d7f3ff;background:rgba(75,183,232,.075);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+    .asset-list{display:grid;gap:.7rem}.asset-row{display:grid;grid-template-columns:48px 1fr auto auto auto;gap:.7rem;align-items:center;padding:.85rem;border:1px solid rgba(245,212,138,.14);border-radius:18px;background:rgba(255,255,255,.038)}.icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:rgba(245,212,138,.11);font-size:1.35rem}.asset-name{color:var(--text);font-size:.95rem;word-break:break-word;line-height:1.45}.asset-name small{display:block;color:var(--muted);font-size:.8rem;margin-top:.15rem}.asset-size{color:var(--muted);font-size:.87rem;white-space:nowrap}.badge{border-radius:999px;border:1px solid rgba(159,240,197,.28);padding:.42rem .62rem;color:var(--green);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}.badge.txt{border-color:rgba(75,183,232,.28);color:#c7f0ff}.asset-open,.copy{font-family:Cinzel,serif;color:var(--gold);border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:999px;padding:.5rem .72rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;white-space:nowrap}.copy.done{color:var(--green);border-color:rgba(159,240,197,.5)}
+    .chooser{margin:1rem 0 0;padding:1.1rem;border:1px dashed rgba(245,212,138,.38);border-radius:22px;background:rgba(5,7,13,.55)}input[type=file]{position:absolute;left:-9999px}.info{margin-top:1rem;color:var(--muted);line-height:1.7}.ok{color:var(--green)}.bad{color:var(--red)}.preview-box{display:none;margin-top:1rem;gap:.7rem;flex-wrap:wrap}.preview-box.show{display:flex}.note{font-size:.92rem;color:var(--muted);line-height:1.7}.too-big{border-color:rgba(255,177,161,.28)}.drive-list{display:grid;gap:.6rem}.drive-item{padding:.75rem;border-radius:15px;border:1px solid rgba(255,177,161,.2);background:rgba(255,177,161,.045);color:var(--muted);line-height:1.55}.drive-item strong{color:var(--red)}
+    footer{color:var(--muted);text-align:center;padding:1.5rem 0 0;font-size:.88rem}
+    @media(max-width:820px){.asset-row{grid-template-columns:42px 1fr}.asset-size,.badge,.asset-open,.copy{margin-left:calc(42px + .7rem);width:max-content}.icon{width:42px;height:42px}.btn{width:100%;text-align:center}.big-actions{display:grid}}
+  </style>
+<meta name="disable-service-worker" content="true">
+
+<meta name="disable-service-worker" content="true">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ1QGYTL9J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HJ1QGYTL9J');
+</script>
+<meta name="bug-bang-migration" content="github-ready-2026-07-12"></head>
+<body>
+  <main class="wrap">
+    <div class="top"><a class="brand" href="index.html">Bug-Bang-Theory</a><span class="small">pagină nelistată · noindex · mini-folder web</span></div>
+
+    <section class="hero">
+      <div class="eyebrow">Panou autor simplificat</div>
+      <h1>Folderul fișierelor</h1>
+      <p class="lead">Aici vezi, cât se poate de aproape de Explorer, ce este deja încărcat pe site. Poți deschide fișierele, copia linkurile și verifica rapid dacă un PDF nou încape în limita de upload.</p>
+      <div class="big-actions">
+        <a class="btn secondary" href="#folder">Vezi fișierele</a>
+        <a class="btn blue" href="#alege">Alege PDF din calculator</a>
+        <a class="btn secondary" href="library.html">Library</a>
+      </div>
+      <div class="summary">
+        <div class="tile"><strong>Fișiere vizibile</strong><span>8 asset-uri în proiect, dintre care 5 PDF-uri locale.</span></div>
+        <div class="tile"><strong>Total local vizibil</strong><span>aprox. 10.14 MiB / 10.63 MB.</span><div class="bar" aria-label="Total vizibil; limita importantă rămâne 5 MB per fișier"><i></i></div></div>
+        <div class="tile"><strong>Limită confirmată</strong><span>maxim 5 MB pentru fiecare fișier încărcat ca asset.</span></div>
+        <div class="tile"><strong>Quota totală</strong><span>platforma nu o afișează prin tool; văd lista și limita pe fișier.</span></div>
+      </div>
+    </section>
+
+    <section class="panel" id="folder">
+      <div class="folder-title"><h2>📁 files/ și root</h2><span class="pill">actualizat cu 3SOS-C</span></div>
+      <div class="asset-list">
+        <div class="asset-row" data-url="assets/files/3sos-c-ro.pdf"><div class="icon">📄</div><div class="asset-name">files/3sos-c-ro.pdf<small>3SOS-C — logică ternară diferențială, PDF română</small></div><div class="asset-size">3.12 MiB</div><div class="badge">PDF local</div><a class="asset-open" href="assets/files/3sos-c-ro.pdf" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+        <div class="asset-row" data-url="assets/files/3sos-c-en.pdf"><div class="icon">📄</div><div class="asset-name">files/3sos-c-en.pdf<small>3SOS-C — Differential Ternary Model, English PDF</small></div><div class="asset-size">3.14 MiB</div><div class="badge">PDF local</div><a class="asset-open" href="assets/files/3sos-c-en.pdf" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+        <div class="asset-row" data-url="assets/files/tscn-en.pdf"><div class="icon">📄</div><div class="asset-name">files/tscn-en.pdf<small>Spherical Cyclic Twist TSC(n) — English PDF</small></div><div class="asset-size">2.70 MiB</div><div class="badge">PDF local</div><a class="asset-open" href="assets/files/tscn-en.pdf" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+        <div class="asset-row" data-url="assets/files/ttcn-en.pdf"><div class="icon">📄</div><div class="asset-name">files/ttcn-en.pdf<small>Cyclic Twist Toroids TTC(n) — English PDF</small></div><div class="asset-size">0.54 MiB</div><div class="badge">PDF local</div><a class="asset-open" href="assets/files/ttcn-en.pdf" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+        <div class="asset-row" data-url="assets/files/ttcn-ro.pdf"><div class="icon">📄</div><div class="asset-name">files/ttcn-ro.pdf<small>Twist Toroizi Ciclici TTC(n) — PDF română</small></div><div class="asset-size">0.65 MiB</div><div class="badge">PDF local</div><a class="asset-open" href="assets/files/ttcn-ro.pdf" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+        <div class="asset-row" data-url="assets/llms.txt"><div class="icon">📝</div><div class="asset-name">llms.txt<small>Fișier text pentru context/AI</small></div><div class="asset-size">1.6 KB</div><div class="badge txt">TXT local</div><a class="asset-open" href="assets/llms.txt" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+        <div class="asset-row" data-url="assets/files/readme.txt"><div class="icon">📝</div><div class="asset-name">files/readme.txt<small>Text scurt de test</small></div><div class="asset-size">14 B</div><div class="badge txt">TXT local</div><a class="asset-open" href="assets/files/readme.txt" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+        <div class="asset-row" data-url="assets/files/bugbang.txt"><div class="icon">📝</div><div class="asset-name">files/bugbang.txt<small>Text scurt de test</small></div><div class="asset-size">8 B</div><div class="badge txt">TXT local</div><a class="asset-open" href="assets/files/bugbang.txt" target="_blank" rel="noopener">Deschide</a><button class="copy" type="button">Copiază link</button></div>
+      </div>
+      <p class="note">Aceasta este lista vizibilă din WebsitePublisher. Nu este Windows Explorer real, dar este cel mai apropiat folder web sigur: nume, mărime, deschidere și copiere link.</p>
+    </section>
+
+    <section class="panel" id="alege">
+      <h2>📤 Verifică un PDF din calculator</h2>
+      <p class="note">Butonul mare de mai jos deschide fereastra locală de fișiere. Nu urcă automat nimic. Verifică doar numele și mărimea, ca să știm dacă încape sub 5 MB.</p>
+      <div class="chooser">
+        <label class="btn" for="pdfFile">Deschide Explorer / Alege PDF</label>
+        <input id="pdfFile" type="file" accept="application/pdf,.pdf">
+        <div id="result" class="info">Nu ai ales încă niciun fișier.</div>
+        <div id="previewBox" class="preview-box"><a id="previewLink" class="btn secondary" target="_blank" rel="noopener">Previzualizează PDF local</a></div>
+      </div>
+    </section>
+
+    <section class="panel too-big">
+      <h2>⚠️ Fișiere rămase pe Drive / prea mari</h2>
+      <div class="drive-list">
+        <div class="drive-item"><strong>BUG BANG EN</strong> — aprox. 6.95 MB, peste limita de 5 MB.</div>
+        <div class="drive-item"><strong>BUG BANG RO</strong> — aprox. 6.87 MB, peste limita de 5 MB.</div>
+        <div class="drive-item"><strong>TSC(n) RO</strong> — aprox. 7.01 MB, peste limita de 5 MB.</div>
+        <div class="drive-item"><strong>Who Am I EN</strong> — aprox. 6.91 MB, peste limita de 5 MB.</div>
+        <div class="drive-item"><strong>Who Am I in the Informational Universe EN</strong> — aprox. 6.59 MB, peste limita de 5 MB.</div>
+      </div>
+      <p class="note">Ca să le punem local pe site, trebuie comprimate sub 5 MB fiecare sau mutate pe un hosting care acceptă fișiere mai mari.</p>
+    </section>
+
+    <footer>© Theo C. Virth · Panou autor privat · <a href="index.html">Înapoi la site</a></footer>
+  </main>
+
+  <script>
+    document.querySelectorAll('.copy').forEach(function(btn){
+      btn.addEventListener('click', async function(){
+        const row = btn.closest('.asset-row');
+        const url = row.getAttribute('data-url');
+        try{
+          await navigator.clipboard.writeText(url);
+          btn.textContent = 'Copiat';
+          btn.classList.add('done');
+          setTimeout(function(){btn.textContent='Copiază link';btn.classList.remove('done');},1800);
+        }catch(e){
+          window.prompt('Copiază linkul:', url);
+        }
+      });
+    });
+
+    const fileInput = document.getElementById('pdfFile');
+    const result = document.getElementById('result');
+    const previewBox = document.getElementById('previewBox');
+    const previewLink = document.getElementById('previewLink');
+    let localUrl = null;
+    fileInput.addEventListener('change', function(){
+      const f = fileInput.files && fileInput.files[0];
+      if(localUrl){ URL.revokeObjectURL(localUrl); localUrl = null; }
+      previewBox.classList.remove('show');
+      if(!f){ result.textContent = 'Nu ai ales încă niciun fișier.'; return; }
+      const mb = f.size / 1000 / 1000;
+      const mib = f.size / 1024 / 1024;
+      const left = 5 - mb;
+      const status = mb <= 5 ? '<span class="ok">OK: încape sub 5 MB</span>' : '<span class="bad">NU încape: depășește limita cu ' + Math.abs(left).toFixed(2) + ' MB</span>';
+      result.innerHTML = '<strong>Fișier:</strong> ' + f.name + '<br><strong>Mărime:</strong> ' + mib.toFixed(2) + ' MiB / ' + mb.toFixed(2) + ' MB<br><strong>Status:</strong> ' + status;
+      localUrl = URL.createObjectURL(f);
+      previewLink.href = localUrl;
+      previewBox.classList.add('show');
+    });
+  </script>
+  
+
+
+
+
+<!-- WebsitePublisher.ai Powered-by Widget -->
+<div id="wpa-widget" style="position:fixed;bottom:0;right:0;z-index:2147483647;display:flex;justify-content:flex-end;pointer-events:none;padding:0 12px 12px 0;">
+    <div style="pointer-events:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(15,15,15,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;line-height:1;color:rgba(255,255,255,0.7);box-shadow:0 2px 12px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.08);">
+        <a href="https://www.websitepublisher.ai?ref=widget" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            WebsitePublisher.ai
+        </a>
+        <span style="color:rgba(255,255,255,0.25);">&middot;</span>
+        <a href="https://www.websitepublisher.ai/report?url=https%3A%2F%2Fwww.bug-bang-theory.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:none;">Report Abuse</a>
+    </div>
+</div>
+</body>
+</html>

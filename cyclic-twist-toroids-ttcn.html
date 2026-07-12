@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cyclic Twist Toroids — TTC(n) | BUG BANG Theory</title>
+    <link rel="canonical" href="https://www.twistgeometry.org/cyclic-twist-toroids-ttcn.html">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="content-language" content="en">
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <meta property="og:title" content="Cyclic Twist Toroids — TTC(n) | BUG BANG Theory" /><meta property="og:description" content="Cyclic Twist Toroids TTC(n): toroidal structures with cyclic closure, discrete monodromy and TTC(6) 60-degree phase structure." />
+  
+<script type="text/javascript">hostname = window.location.host;</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#05070d;--surface:#0b1220;--text:#f7ecd2;--muted:#cdbf9b;--gold:#f5d48a;--blue:#4bb7e8;--line:rgba(245,212,138,.28)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 50% 14%,rgba(75,183,232,.15),transparent 34%),linear-gradient(180deg,#05070d,#090d18 45%,#05070d);color:var(--text);font-family:'Libre Baskerville',serif;line-height:1.7;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;background-image:radial-gradient(circle at 12% 15%,rgba(245,212,138,.28) 0 1px,transparent 2px),radial-gradient(circle at 80% 24%,rgba(245,212,138,.22) 0 1px,transparent 2px),radial-gradient(circle at 55% 70%,rgba(75,183,232,.16) 0 1px,transparent 2px);background-size:180px 180px,240px 240px,220px 220px;pointer-events:none;opacity:.65}
+    a{color:var(--gold)} .wrap{width:min(1120px,92vw);margin:0 auto;position:relative;z-index:1}.nav{position:sticky;top:0;z-index:5;background:rgba(5,7,13,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(245,212,138,.14)}.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand,.nav a,.kicker,.hero h1,.card h2,.card h3,.seal{font-family:Cinzel,serif}.brand{letter-spacing:.15em;text-decoration:none;color:var(--gold);font-weight:700;text-transform:uppercase}.nav-links{display:flex;gap:1rem;flex-wrap:wrap}.nav-links a{text-decoration:none;color:var(--muted);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}.nav-links a:hover{color:var(--gold)}.hero{min-height:86vh;display:grid;place-items:center;text-align:center;padding:6rem 0 3rem}.kicker{letter-spacing:.22em;color:var(--blue);font-size:.86rem;text-transform:uppercase}.hero h1{color:var(--gold);font-size:clamp(2.35rem,6vw,5.8rem);line-height:1.05;margin:1rem 0;text-shadow:0 0 32px rgba(245,212,138,.25)}.subtitle{font-size:clamp(1rem,2vw,1.35rem);max-width:860px;margin:0 auto;color:var(--text)}.meta{margin-top:2rem;color:var(--muted);font-size:.95rem}.seal{width:140px;height:140px;border:1px solid var(--line);border-radius:50%;margin:2.5rem auto 0;display:grid;place-items:center;color:var(--gold);box-shadow:0 0 45px rgba(245,212,138,.12) inset}.section{padding:4rem 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(310px,100%),1fr));gap:1.4rem}.card{background:linear-gradient(180deg,rgba(11,18,32,.88),rgba(5,7,13,.9));border:1px solid var(--line);border-radius:22px;padding:2rem;box-shadow:0 20px 70px rgba(0,0,0,.35)}.card h2,.card h3{color:var(--gold);line-height:1.25;margin-top:0}.buttons{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}.btn{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .2s ease,box-shadow .2s ease}.btn.primary{background:var(--gold);color:#090d18}.btn.secondary{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.04)}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(245,212,138,.18)}.note{color:var(--muted);font-size:.93rem}.formula{font-family:ui-monospace,Menlo,Consolas,monospace;color:#f8dfa1;background:rgba(255,255,255,.05);border:1px solid rgba(245,212,138,.18);border-radius:14px;padding:1rem;overflow:auto}.footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;text-align:center}.reveal{animation:fadeInUp .8s ease-out both}@keyframes fadeInUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}@media(max-width:720px){.nav-inner{height:auto;min-height:72px;display:block;padding:1rem 0}.nav-links{margin-top:.75rem}.hero{min-height:auto;padding-top:4rem}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+<meta name="disable-service-worker" content="true">
+<meta name="disable-service-worker" content="true">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ1QGYTL9J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HJ1QGYTL9J');
+</script>
+<meta name="googlebot" content="noindex, nofollow"><meta name="bug-bang-migration" content="github-ready-2026-07-12"></head>
+<body>
+  <nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html">Bug-Bang-Theory</a><div class="nav-links"><a href="index.html">Home</a><a href="twist-sferic-ciclic-tscn.html">TSC(n)</a><a href="library.html">Library</a></div></div></nav>
+  <main>
+    <section class="hero wrap reveal"><div><div class="kicker">public conceptual toroidal model</div><h1>CYCLIC TWIST TOROIDS<br>TTC(n)</h1><p class="subtitle">An architectural principle for toroidal structures with cyclic closure and discrete monodromy.</p><div class="meta">Author: <strong>Teodor Cârciumaru ~ Doru ~</strong><br>June 2026 · Bug-Bang-Theory.org</div><div class="seal">TTC(n)</div></div></section>
+    <section class="section"><div class="wrap grid"><article class="card reveal"><h2>English public version</h2><p><strong>CYCLIC TWIST TOROIDS — TTC(n)</strong>. Full English public version for analysis, simulation and experimental development. This is now the main public TTC(n) English document.</p><div class="buttons"><a class="btn primary" href="assets/files/ttcn-en.pdf" target="_blank" rel="noopener">Open EN PDF</a></div></article><article class="card reveal"><h2>Versiunea română</h2><p><strong>TWIST TOROIZI CICLICI — TTC(n)</strong>. Variantă română de lucru academic/revizie, utilă pentru structurarea modelului, cu statut diferit de versiunea publică EN.</p><div class="buttons"><a class="btn primary" href="assets/files/ttcn-ro.pdf" target="_blank" rel="noopener">Deschide PDF RO</a></div></article></div></section>
+    <section class="section"><div class="wrap grid"><article class="card"><h3>Core idea</h3><p>TTC(n) is defined as a global toroidal C1 carrier with an internal Cn structure and a discrete monodromy. The central case TTC(6) uses a 60° step and returns the internal orientation after six phase cycles.</p></article><article class="card"><h3>Responsible status</h3><p>The model is formally/geometrically structured. Magnetic, inductive or material extensions are explicitly conditional and require simulation, FEM modeling and experimental measurement.</p></article></div></section>
+    <section class="section"><div class="wrap card"><h3>Compact formula</h3><div class="formula">TTC(n) = global C1 torus + internal Cn section + monodromy R(2π/n)<br>MTTC(n) = TTC(n) + magnetic distribution compatible with R(2π/n)<br>PMTTC(n) = physical / prototypal implementation of MTTC(n)</div><p class="note">This page marks the public placement of the TTC(n) toroidal branch on the author's domain.</p></div></section>
+  </main>
+  <footer class="footer wrap"><a class="btn secondary" href="index.html">Back to homepage</a> <a class="btn secondary" href="twist-sferic-ciclic-tscn.html">TSC(n)</a><br><br>© 2026 Teodor Cârciumaru ~ Doru ~ · Bug-Bang-Theory.org</footer>
+  
+
+
+
+
+<!-- WebsitePublisher.ai Powered-by Widget -->
+<div id="wpa-widget" style="position:fixed;bottom:0;right:0;z-index:2147483647;display:flex;justify-content:flex-end;pointer-events:none;padding:0 12px 12px 0;">
+    <div style="pointer-events:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(15,15,15,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;line-height:1;color:rgba(255,255,255,0.7);box-shadow:0 2px 12px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.08);">
+        <a href="https://www.websitepublisher.ai?ref=widget" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            WebsitePublisher.ai
+        </a>
+        <span style="color:rgba(255,255,255,0.25);">&middot;</span>
+        <a href="https://www.websitepublisher.ai/report?url=https%3A%2F%2Fwww.bug-bang-theory.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:none;">Report Abuse</a>
+    </div>
+</div>
+</body>
+</html>

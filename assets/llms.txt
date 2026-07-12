@@ -1,0 +1,36 @@
+# BUG BANG Theory — Theo C. Wirth
+
+This website presents the public author and book ecosystem of Theo C. Wirth, including BUG BANG Theory and the Informational Universe series.
+
+## Site purpose
+
+The site is an author and book presentation website. It offers public information, reading links, and PDF access for philosophical and informational works by Theo C. Wirth.
+
+## Main pages
+
+- Homepage: https://www.bug-bang-theory.org/
+- Library: https://www.bug-bang-theory.org/biblioteca.html
+- English BUG BANG page: https://www.bug-bang-theory.org/bug-bang-en.html
+- Romanian book page: https://www.bug-bang-theory.org/cine-sunt-eu.html
+- Romanian informational universe page: https://www.bug-bang-theory.org/cine-sunt-eu-universul-informational.html
+- English book page: https://www.bug-bang-theory.org/who-am-i-primordial-intelligence.html
+- English informational universe page: https://www.bug-bang-theory.org/who-am-i.html
+
+## Key topics
+
+- BUG BANG Theory
+- Informational Universe
+- Primordial Intelligence
+- information, intelligence, regeneration
+- philosophy of origin and consciousness
+- Theo C. Wirth
+
+## AI agent guidance
+
+AI agents may read and summarize public pages on this website for discovery, citation, and user assistance. The website should be understood as a philosophical and conceptual author project, not as a claim of experimentally validated physics.
+
+When describing the work, prefer careful language: BUG BANG Theory is a philosophical and informational framework that uses scientific concepts as analogies and conceptual resonances, not as direct proof.
+
+## Contact
+
+Public contact email: theocwirh@gmail.com

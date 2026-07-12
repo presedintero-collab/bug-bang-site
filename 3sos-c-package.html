@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Software-First Ternary Logic — 3SOS-C | BUG BANG Theory</title>
+    <link rel="canonical" href="https://www.twistgeometry.org/3sos-c-package.html">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="content-language" content="en">
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <meta property="og:title" content="Software-First Ternary Logic — 3SOS-C | BUG BANG Theory" /><meta property="og:description" content="Public software-first 3SOS-C technical package with RO/EN papers, Python library, .sos DSL, simulator, visual outputs and experimental HDL/Verilog expansion." />
+  
+<script type="text/javascript">hostname = window.location.host;</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#05070d;--surface:#0b1220;--text:#f7ecd2;--muted:#c4b68f;--gold:#f5d48a;--blue:#4bb7e8;--line:rgba(245,212,138,.25);--max:min(1120px,92vw)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Libre Baskerville',serif;color:var(--text);background:radial-gradient(circle at 18% 10%,rgba(75,183,232,.20),transparent 32rem),radial-gradient(circle at 82% 8%,rgba(245,212,138,.16),transparent 28rem),var(--bg)}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.5) 0 1px,transparent 1.5px),radial-gradient(circle at 70% 20%,rgba(245,212,138,.55) 0 1px,transparent 1.4px);background-size:180px 180px,260px 260px}
+    a{color:inherit;text-decoration:none}.container{width:var(--max);margin:0 auto;padding:0 clamp(1rem,3vw,2rem);position:relative;z-index:1}.nav{position:sticky;top:0;z-index:10;background:rgba(5,7,13,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(245,212,138,.14)}.nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand,.nav a,h1,h2,h3,.btn,.tag{font-family:Cinzel,serif}.brand{color:var(--gold);letter-spacing:.16em;font-weight:700;text-transform:uppercase}.nav-links{display:flex;gap:1rem;flex-wrap:wrap}.nav-links a{color:var(--muted);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}.hero{padding:clamp(4rem,8vw,9rem) 0}.eyebrow{font-family:Cinzel,serif;color:var(--blue);letter-spacing:.22em;text-transform:uppercase;font-size:.82rem;margin-bottom:1rem}h1{font-size:clamp(2.55rem,7vw,6rem);line-height:1.03;color:var(--gold);margin:0}.lead{font-size:clamp(1rem,1.2vw + .8rem,1.35rem);line-height:1.9;color:#e9dcb9;max-width:900px;margin:1.35rem 0 0}.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.85rem 1.1rem;border-radius:999px;border:1px solid var(--line);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}.primary{background:linear-gradient(135deg,#f5d48a,#b98d39);color:#090b10}.secondary{background:rgba(255,255,255,.055);color:var(--gold)}section{padding:clamp(3rem,6vw,6rem) 0;border-top:1px solid rgba(245,212,138,.12)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1rem}.card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.025));box-shadow:0 22px 70px rgba(0,0,0,.25);padding:1.4rem}.card h2,.card h3{margin:.2rem 0 1rem;color:var(--gold)}.card p,.card li{color:var(--muted);line-height:1.75}.tag{display:inline-block;color:var(--blue);letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;margin-bottom:.4rem}.notice{border-color:rgba(75,183,232,.34);background:rgba(75,183,232,.075)}.downloads .card{display:flex;flex-direction:column}.downloads .btn{margin-top:auto;width:max-content}.formula{margin:1rem 0;padding:1rem;border-radius:18px;border:1px solid rgba(75,183,232,.28);background:rgba(75,183,232,.075);color:#e9f7ff;text-align:center}footer{padding:3rem 0;border-top:1px solid rgba(245,212,138,.14);color:var(--muted);font-size:.9rem;text-align:center}@keyframes fadeInUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}.reveal{animation:fadeInUp .8s ease-out both}@media(max-width:760px){.nav-inner{display:block;padding:1rem 0}.nav-links{margin-top:.75rem}.actions{display:grid}.btn{width:100%;text-align:center}.downloads .btn{width:100%}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+<meta name="disable-service-worker" content="true">
+<meta name="disable-service-worker" content="true">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ1QGYTL9J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HJ1QGYTL9J');
+</script>
+<meta name="googlebot" content="noindex, nofollow"><meta name="bug-bang-migration" content="github-ready-2026-07-12"></head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html">Theo C. Virth</a><div class="nav-links"><a href="index.html">Home</a><a href="3sos-c.html">3SOS-C RO</a><a href="3sos-c-en.html">3SOS-C EN</a><a href="library.html">Library</a></div></div></nav>
+  <main>
+    <header class="hero"><div class="container reveal"><div class="eyebrow">release candidate · software-first</div><h1>3SOS-C Software-First Technical Package</h1><p class="lead">Differential ternary logic model with an explicit neutral equilibrium state. The package brings together the Romanian and English technical papers, the Python library, the .sos DSL, the simulator, exploratory benchmark, visual outputs and experimental HDL/Verilog expansion.</p><div class="actions"><a class="btn primary" href="assets/files/3sos-c-ro.pdf" target="_blank" rel="noopener">PDF RO v1.0 RC</a><a class="btn primary" href="assets/files/3sos-c-en.pdf" target="_blank" rel="noopener">PDF EN v1.0 RC</a><a class="btn secondary" href="assets/files/3sos-c-software-v0-8.zip" target="_blank" rel="noopener">Software ZIP v0.8</a></div></div></header>
+    <section><div class="container grid"><article class="card notice"><span class="tag">status</span><h2>Experimental, not hardware validation</h2><p>3SOS-C is presented as a mathematical and software prototype running on ordinary binary hardware. It is not claimed as a validated physical ternary processor and does not claim universal superiority over binary computation.</p></article><article class="card"><span class="tag">formalism</span><h2>Core model</h2><p>The ternary alphabet is {-1, 0, +1}. The central value 0 is treated as active differential equilibrium, not as absence.</p><div class="formula">0 = differential equilibrium</div></article><article class="card"><span class="tag">software</span><h2>Python + DSL + simulator</h2><p>The v0.8 package includes the Python core, .sos DSL, simulator, CSV/JSON export, dynamic benchmark and examples.</p></article><article class="card"><span class="tag">v0.8</span><h2>Visual + HDL expansion</h2><p>v0.8 adds SVG/HTML truth-table rendering, a Verilog 3SOS-C cell, a balanced ternary full-adder and a minimal testbench for future hardware exploration.</p></article><article class="card"><span class="tag">benchmark</span><h2>Exploratory benchmark</h2><p>The benchmark compares a binary comparator with a ternary neutral-window model under a synthetic noisy signal. Results depend on the signal and neutral-zone parameters used in simulation.</p></article><article class="card"><span class="tag">author</span><h2>Theodor Carciumaru ~ Doru ~</h2><p>Public technical package for the 3SOS-C branch of the Bug-Bang-Theory.org library.</p></article></div></section>
+    <section class="downloads"><div class="container grid"><article class="card"><span class="tag">download</span><h3>Lucrare tehnică RO</h3><p>PDF A5, v1.0 RC.</p><a class="btn primary" href="assets/files/3sos-c-ro.pdf" target="_blank" rel="noopener">Deschide RO PDF</a></article><article class="card"><span class="tag">download</span><h3>Technical Paper EN</h3><p>A5 PDF, v1.0 RC.</p><a class="btn primary" href="assets/files/3sos-c-en.pdf" target="_blank" rel="noopener">Open EN PDF</a></article><article class="card"><span class="tag">download</span><h3>Software Package v0.8</h3><p>Python package with visual and HDL expansion.</p><a class="btn primary" href="assets/files/3sos-c-software-v0-8.zip" target="_blank" rel="noopener">Download ZIP</a></article></div></section>
+  </main>
+  <footer><div class="container">© 2026 Theodor Carciumaru ~ Doru ~ · 3SOS-C Software-First Technical Package · <a href="3sos-c.html">RO page</a> · <a href="3sos-c-en.html">EN page</a></div></footer>
+  
+
+
+
+
+<!-- WebsitePublisher.ai Powered-by Widget -->
+<div id="wpa-widget" style="position:fixed;bottom:0;right:0;z-index:2147483647;display:flex;justify-content:flex-end;pointer-events:none;padding:0 12px 12px 0;">
+    <div style="pointer-events:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(15,15,15,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;line-height:1;color:rgba(255,255,255,0.7);box-shadow:0 2px 12px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.08);">
+        <a href="https://www.websitepublisher.ai?ref=widget" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.9);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            WebsitePublisher.ai
+        </a>
+        <span style="color:rgba(255,255,255,0.25);">&middot;</span>
+        <a href="https://www.websitepublisher.ai/report?url=https%3A%2F%2Fwww.bug-bang-theory.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:none;">Report Abuse</a>
+    </div>
+</div>
+</body>
+</html>
