@@ -1,5 +1,6 @@
 name: Restore homepage books and layout
 # Triggered after the workflow became active on the default branch.
+# Second trigger through an explicit Git ref update.
 
 on:
   push:
