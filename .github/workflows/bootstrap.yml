@@ -1,0 +1,27 @@
+name: Build BUG BANG static site
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/bootstrap.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download verified backup
+        run: curl -L --fail --silent --show-error 'https://ddc1689526ec51ede2.v2.appdeploy.ai/resources/BUG_BANG_SITE_BACKUP_2026-07-12.zip' -o backup.zip
+      - name: Build and validate static migration
+        run: python bootstrap_bugbang.py
+      - name: Commit generated site
+        shell: bash
+        run: |
+          cp -a site/. .
+          rm -rf site backup.zip
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publish verified BUG BANG static migration [skip ci]'
+          git push
