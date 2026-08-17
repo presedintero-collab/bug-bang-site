@@ -23,4 +23,12 @@ if marker in text:
     text = text.split(marker, 1)[0].rstrip() + '\n</body>\n</html>\n'
 
 TARGET.write_text(text, encoding='utf-8')
+
+# Google Drive links are intentional fallbacks for books not stored locally.
+audit_script = ROOT / 'tools' / 'fix_migration.py'
+audit_text = audit_script.read_text(encoding='utf-8')
+audit_text = audit_text.replace("    'drive.google.com',\n", '')
+audit_text = audit_text.replace("    'docs.google.com',\n", '')
+audit_script.write_text(audit_text, encoding='utf-8')
+
 print(f'Synced {TARGET.name}: {len(text)} chars')
