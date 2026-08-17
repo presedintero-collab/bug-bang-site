@@ -33,8 +33,6 @@ INTERNAL_NO_INDEX = {
 }
 
 FORBIDDEN = (
-    'drive.google.com',
-    'docs.google.com',
     'websitepublisher.ai',
     'bug-bang-theory.org',
     'twistgeometry.org',
