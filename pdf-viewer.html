@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,follow">
 <title>Vizualizare PDF — TwistPhysics</title>
 <style>
 html,body{height:100%;margin:0;background:#05070d;color:#f7ecd2;font-family:Georgia,serif}body{display:grid;grid-template-rows:auto 1fr}.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid rgba(245,212,138,.25);background:#080b14}.bar a{color:#f5d48a;text-decoration:none;border:1px solid rgba(245,212,138,.35);border-radius:999px;padding:8px 12px}.title{flex:1;min-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}iframe{width:100%;height:100%;border:0;background:#fff}.msg{display:none;padding:24px;line-height:1.7}.msg a{color:#f5d48a}
@@ -20,5 +19,5 @@ const safe=/^assets\/files\/[A-Za-z0-9._()%\-]+\.pdf$/i.test(f);
 const frame=document.getElementById('frame'),open=document.getElementById('open'),title=document.getElementById('title'),msg=document.getElementById('msg');
 if(safe){const src='/'+f;frame.src=src+'#view=FitH';open.href=src;title.textContent=f.split('/').pop();document.title=title.textContent+' — PDF';}else{frame.remove();open.remove();msg.style.display='block';}
 </script>
-</body>
+<script id="same-tab-internal-links">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("a[target]").forEach(function(a){var h=a.getAttribute("href")||"";try{var u=new URL(h,window.location.href);if(u.origin===window.location.origin){a.removeAttribute("target");}}catch(e){a.removeAttribute("target");}});});</script></body>
 </html>
