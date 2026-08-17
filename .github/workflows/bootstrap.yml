@@ -9,6 +9,8 @@ on:
       - 'tools/sync_wp_latest.py'
       - 'tools/fix_migration.py'
       - 'tools/fix_navigation.py'
+      - 'tools/fix_pdf_links.py'
+      - 'pdf-viewer.html'
 
 permissions:
   contents: write
@@ -27,6 +29,9 @@ jobs:
 
       - name: Repair migrated links and metadata
         run: python tools/fix_migration.py
+
+      - name: Route local PDFs through browser viewer
+        run: python tools/fix_pdf_links.py
 
       - name: Keep internal navigation in the same tab
         run: python tools/fix_navigation.py
