@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/bootstrap.yml'
+      - 'tools/sync_wp_latest.py'
       - 'tools/fix_migration.py'
       - 'tools/fix_navigation.py'
 
@@ -20,6 +21,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Pull latest English BUG BANG page
+        run: python tools/sync_wp_latest.py
 
       - name: Repair migrated links and metadata
         run: python tools/fix_migration.py
@@ -36,6 +40,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No corrections required.'
           else
-            git commit -m 'Correct BUG BANG navigation and links [skip ci]'
+            git commit -m 'Sync latest BUG BANG page to Twist Physics [skip ci]'
             git push
           fi
