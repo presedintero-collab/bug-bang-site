@@ -1,33 +1,29 @@
-# LOCK v1 RC1 — TwistPhysics public release
+# LOCK v1 RC1 — public evaluation area
 
-Public page: https://twistphysics.org/lock-v1-rc1.html
+Public research page: https://twistphysics.org/lock-v1-rc1.html
 
-The reproducibility ZIP is stored in this repository as six base64 parts:
-- zip.part01.b64
-- zip.part02.b64
-- zip.part03.b64
-- zip.part04.b64
-- zip.part05.b64
-- zip.part06.b64
+The complete RC1 workbench is not distributed from this directory.
 
-The public page fetches the six parts, concatenates them in order, decodes them locally in the browser, and downloads:
+This public area retains:
+- the published benchmark summary;
+- declared scope and limitations;
+- source provenance;
+- the historical RC1 package identity for verification of previously obtained copies.
 
-LOCK_KLIPPER_RC1_PUBLIC_2026-10-02.zip
+A reduced evaluation demo will be added after review.
 
-Expected package:
-- Size: 23046 bytes
-- SHA-256: 7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3
-- Base64 length: 30728 characters
+Historical RC1 package SHA-256:
+`7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3`
 
-Pinned Klipper commit:
-https://github.com/Klipper3d/klipper/commit/461c4e3722c3a897fba1c6b3f0780a5315043842
+Pinned Klipper source commit:
+`461c4e3722c3a897fba1c6b3f0780a5315043842`
 
-Published controlled result:
+Published controlled results:
 - LOCK_TRACE median wall time: 3817.9 ns/move
 - VERIFY_EVERY_MOVE median: 4536.1 ns/move
 - reduction vs strict per-move verify: 15.83%
 - 12/12 paired rounds favored LOCK_TRACE
-- 6240/6240 masked compensating fault pairs detected by exact trace evidence
+- 6240/6240 masked compensating fault pairs detected in the declared test class
 - 320/320 declared single input-delta faults detected
 - LOCK_TRACE remained 22.77% slower than RAW_SUBSET
 
