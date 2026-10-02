@@ -6,7 +6,7 @@
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://twistphysics.org/lock-v1-rc1.html">
 <title>LOCK v1 RC1 — Verified Execution Research Release | TwistPhysics</title>
-<meta name="description" content="LOCK v1 RC1 public research release: audited verified-execution core, controlled Klipper-derived benchmark, fault evidence and reproducibility package.">
+<meta name="description" content="LOCK v1 RC1 public research checkpoint: controlled Klipper-derived benchmark, fault evidence, scope and source provenance.">
 <style>
 :root{--bg:#05070d;--panel:#0b1220;--text:#f7ecd2;--muted:#c7b991;--gold:#f5d48a;--blue:#4bb7e8;--green:#9ff0c5;--line:rgba(245,212,138,.22)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 10%,rgba(75,183,232,.17),transparent 32rem),radial-gradient(circle at 82% 8%,rgba(245,212,138,.12),transparent 28rem),var(--bg);color:var(--text);font:17px/1.72 Georgia,serif}
@@ -17,7 +17,7 @@ main{max-width:1080px;margin:auto;padding:7vh 24px 8vh}.kicker{color:var(--blue)
 <body><main>
 <div class="kicker">TwistPhysics · 3SOS-C research · 2026-10-02</div>
 <h1>LOCK v1 RC1</h1>
-<p class="lead">A public research checkpoint for certified execution with conditional LOCK, exact witnesses, dependency invalidation and bounded recovery. This page and its reproducibility package are hosted directly from the GitHub repository that serves <b>twistphysics.org</b>.</p>
+<p class="lead">A public research checkpoint for verified execution. The page keeps the published benchmark results, declared scope and source provenance visible while the public evaluation materials are being reduced to a minimal verification demo.</p>
 <span class="status">PASS WITH SCOPE · controlled software workbench</span>
 
 <div class="pipeline">MASTER → VERIFY → CERTIFY → LOCK → EXECUTE → FINAL WITNESS → COMMIT<br>MISMATCH → UNLOCK → LOCALIZE → REPAIR / ROLLBACK → REVERIFY → RELOCK</div>
@@ -32,14 +32,12 @@ main{max-width:1080px;margin:auto;padding:7vh 24px 8vh}.kicker{color:var(--blue)
 <div class="note"><b>Correct interpretation:</b> LOCK_TRACE recovered part of the cost of strict verification, but it remained <b>22.77% slower than RAW_SUBSET</b>. This is not a claim that LOCK is faster than unprotected Klipper.</div>
 
 <section id="download">
-<h2>Reproducibility package</h2>
-<p>The package is versioned in the same Git repository as this site. The browser downloads six stored base64 chunks from <code>/research/lock-v1-rc1/</code>, reconstructs the ZIP locally, verifies its SHA-256, and only then saves it.</p>
+<h2>Public evaluation materials</h2>
+<p>The full RC1 workbench is no longer distributed from this page. A reduced verification demo will be published here after review, while the benchmark results, declared scope and source provenance remain public.</p>
 <div class="actions">
-<button class="btn primary" id="downloadBtn" type="button">Download verified ZIP</button>
-<a class="btn" href="https://github.com/presedintero-collab/bug-bang-site/tree/main/research/lock-v1-rc1" target="_blank" rel="noopener">Browse package in GitHub</a>
 <a class="btn" href="https://github.com/Klipper3d/klipper/commit/461c4e3722c3a897fba1c6b3f0780a5315043842" target="_blank" rel="noopener">Pinned Klipper commit</a>
 </div>
-<p id="status" class="muted">Expected ZIP: 23,046 bytes · SHA-256 <code>7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3</code></p>
+<p class="muted">Published RC1 package identity retained for provenance: SHA-256 <code>7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3</code>.</p>
 </section>
 
 <section>
@@ -52,29 +50,4 @@ main{max-width:1080px;margin:auto;padding:7vh 24px 8vh}.kicker{color:var(--blue)
 
 <footer>BUG BANG / 3SOS-C / TwistPhysics research · Theo C. Wirth · RC1</footer>
 
-<script>
-(function(){
- const btn=document.getElementById('downloadBtn'), status=document.getElementById('status');
- const expected='7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3';
- const parts=[1,2,3,4,5,6].map(n=>'/research/lock-v1-rc1/zip.part'+String(n).padStart(2,'0')+'.b64');
- function hex(buf){return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('')}
- btn.addEventListener('click',async function(){
-  btn.disabled=true; status.textContent='Loading versioned package from GitHub Pages…';
-  try{
-   const texts=await Promise.all(parts.map(async u=>{const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw new Error(u+' '+r.status);return (await r.text()).trim()}));
-   const b64=texts.join('');
-   if(b64.length!==30728)throw new Error('base64 length '+b64.length);
-   const bin=atob(b64), bytes=new Uint8Array(bin.length);
-   for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
-   if(bytes.length!==23046)throw new Error('ZIP size '+bytes.length);
-   const digest=hex(await crypto.subtle.digest('SHA-256',bytes));
-   if(digest!==expected)throw new Error('SHA-256 mismatch: '+digest);
-   const url=URL.createObjectURL(new Blob([bytes],{type:'application/zip'}));
-   const a=document.createElement('a');a.href=url;a.download='LOCK_KLIPPER_RC1_PUBLIC_2026-10-02.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
-   status.innerHTML='Verified locally: <code>'+digest+'</code> · download started.';
-  }catch(e){status.textContent='Download verification failed: '+e.message}
-  finally{btn.disabled=false}
- });
-})();
-</script>
 </main></body></html>
