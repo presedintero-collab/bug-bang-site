@@ -4,35 +4,77 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://www.bug-bang-theory.org/3sos-c-developer-research-pack-v1.html">
-<title>LOCK v1 RC1 — Verified Execution Research Release</title>
+<link rel="canonical" href="https://twistphysics.org/lock-v1-rc1.html">
+<title>LOCK v1 RC1 — Verified Execution Research Release | TwistPhysics</title>
+<meta name="description" content="LOCK v1 RC1 public research release: audited verified-execution core, controlled Klipper-derived benchmark, fault evidence and reproducibility package.">
 <style>
-:root{--bg:#05070d;--panel:#0b1220;--text:#f7ecd2;--muted:#c7b991;--gold:#f5d48a;--blue:#4bb7e8;--green:#9ff0c5}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 10%,rgba(75,183,232,.15),transparent 32rem),var(--bg);color:var(--text);font:17px/1.7 Georgia,serif}
-main{max-width:980px;margin:auto;padding:8vh 24px}.kicker{color:var(--blue);text-transform:uppercase;letter-spacing:.18em;font:700 12px Arial,sans-serif}
-h1{font:700 clamp(42px,8vw,84px)/1.02 Georgia,serif;color:var(--gold);margin:.2em 0}.lead{font-size:1.2rem;color:#eadfbe}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:32px 0}.card{background:rgba(11,18,32,.84);border:1px solid rgba(245,212,138,.2);border-radius:18px;padding:18px}.card strong{display:block;color:var(--gold);font-size:1.6rem}.card span{color:var(--muted);font-size:.9rem}
-.note{border-left:3px solid var(--blue);padding:14px 18px;background:rgba(75,183,232,.07);color:#e9dcb9}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-block;padding:12px 18px;border:1px solid rgba(245,212,138,.35);border-radius:999px;color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.btn.primary{background:rgba(245,212,138,.1)}
-code{font-family:ui-monospace,Consolas,monospace;color:#c6efff}.small{color:var(--muted);font-size:.9rem}
+:root{--bg:#05070d;--panel:#0b1220;--text:#f7ecd2;--muted:#c7b991;--gold:#f5d48a;--blue:#4bb7e8;--green:#9ff0c5;--line:rgba(245,212,138,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 10%,rgba(75,183,232,.17),transparent 32rem),radial-gradient(circle at 82% 8%,rgba(245,212,138,.12),transparent 28rem),var(--bg);color:var(--text);font:17px/1.72 Georgia,serif}
+main{max-width:1080px;margin:auto;padding:7vh 24px 8vh}.kicker{color:var(--blue);text-transform:uppercase;letter-spacing:.18em;font:700 12px Arial,sans-serif}h1{font-size:clamp(44px,8vw,88px);line-height:1.02;color:var(--gold);margin:.2em 0}.lead{font-size:1.18rem;color:#eadfbe;max-width:920px}.status{display:inline-block;margin:14px 0 4px;padding:7px 12px;border:1px solid rgba(159,240,197,.35);border-radius:999px;color:var(--green);font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:32px 0}.card{background:rgba(11,18,32,.84);border:1px solid var(--line);border-radius:20px;padding:18px}.card strong{display:block;color:var(--gold);font-size:1.7rem}.card span,.muted{color:var(--muted);font-size:.92rem}.note{border-left:3px solid var(--blue);padding:14px 18px;background:rgba(75,183,232,.07);color:#e9dcb9;margin:24px 0}.pipeline{font-family:ui-monospace,Consolas,monospace;overflow:auto;padding:14px 16px;border:1px solid rgba(75,183,232,.25);border-radius:14px;background:rgba(75,183,232,.05);color:#d8f4ff}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.btn{appearance:none;cursor:pointer;display:inline-block;padding:12px 18px;border:1px solid rgba(245,212,138,.35);border-radius:999px;background:transparent;color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.btn.primary{background:rgba(245,212,138,.11)}.btn:disabled{opacity:.55;cursor:wait}code{font-family:ui-monospace,Consolas,monospace;color:#c6efff;word-break:break-all}section{margin-top:44px;padding-top:28px;border-top:1px solid rgba(245,212,138,.12)}h2{color:var(--gold);font-size:2rem}.check{color:var(--green)}footer{margin-top:54px;color:var(--muted);font-size:.88rem}
 </style>
 </head>
 <body><main>
-<div class="kicker">3SOS-C research · LOCK v1 RC1</div>
-<h1>Verified execution,<br>measured with scope.</h1>
-<p class="lead">LOCK v1 RC1 is an audited research checkpoint for certified execution, conditional LOCK, exact fault evidence, dependency invalidation and bounded recovery. The controlled workbench is pinned to an official Klipper source commit.</p>
+<div class="kicker">TwistPhysics · 3SOS-C research · 2026-10-02</div>
+<h1>LOCK v1 RC1</h1>
+<p class="lead">A public research checkpoint for certified execution with conditional LOCK, exact witnesses, dependency invalidation and bounded recovery. This page and its reproducibility package are hosted directly from the GitHub repository that serves <b>twistphysics.org</b>; WebsitePublisher is not required.</p>
+<span class="status">PASS WITH SCOPE · controlled software workbench</span>
+
+<div class="pipeline">MASTER → VERIFY → CERTIFY → LOCK → EXECUTE → FINAL WITNESS → COMMIT<br>MISMATCH → UNLOCK → LOCALIZE → REPAIR / ROLLBACK → REVERIFY → RELOCK</div>
+
 <div class="grid">
-<div class="card"><strong>15.83%</strong><span>lower median wall time vs strict verification on every move</span></div>
-<div class="card"><strong>12 / 12</strong><span>paired timing rounds favored LOCK_TRACE</span></div>
-<div class="card"><strong>6,240 / 6,240</strong><span>masked compensating fault pairs detected</span></div>
+<div class="card"><strong>15.83%</strong><span>lower published median wall time for LOCK_TRACE vs strict VERIFY_EVERY_MOVE</span></div>
+<div class="card"><strong>12 / 12</strong><span>paired timing rounds favored LOCK_TRACE in the published campaign</span></div>
+<div class="card"><strong>6,240 / 6,240</strong><span>masked compensating fault pairs detected by exact trace evidence</span></div>
 <div class="card"><strong>320 / 320</strong><span>declared single input-delta faults detected</span></div>
 </div>
-<div class="note"><b>Scope:</b> this is not a full Klipper daemon, MCU, printer or safety certification. LOCK v1 remains unfrozen pending hardware-counter and physical validation gates.</div>
+
+<div class="note"><b>Correct interpretation:</b> LOCK_TRACE recovered part of the cost of strict verification, but it remained <b>22.77% slower than RAW_SUBSET</b>. This is not a claim that LOCK is faster than unprotected Klipper.</div>
+
+<section id="download">
+<h2>Reproducibility package</h2>
+<p>The package is versioned in the same Git repository as this site. The browser downloads six stored base64 chunks from <code>/research/lock-v1-rc1/</code>, reconstructs the ZIP locally, verifies its SHA-256, and only then saves it.</p>
 <div class="actions">
-<a class="btn primary" href="https://www.bug-bang-theory.org/3sos-c-developer-research-pack-v1.html">Open canonical release</a>
-<a class="btn" href="https://www.bug-bang-theory.org/3sos-c-developer-research-pack-v1.html#download">Download reproducibility ZIP</a>
-<a class="btn" href="https://github.com/Klipper3d/klipper/commit/461c4e3722c3a897fba1c6b3f0780a5315043842">Pinned Klipper commit</a>
+<button class="btn primary" id="downloadBtn" type="button">Download verified ZIP</button>
+<a class="btn" href="https://github.com/presedintero-collab/bug-bang-site/tree/main/research/lock-v1-rc1" target="_blank" rel="noopener">Browse package in GitHub</a>
+<a class="btn" href="https://github.com/Klipper3d/klipper/commit/461c4e3722c3a897fba1c6b3f0780a5315043842" target="_blank" rel="noopener">Pinned Klipper commit</a>
 </div>
-<p class="small">Public bundle SHA-256: <code>7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3</code></p>
-<p class="small">BUG BANG / 3SOS-C research project — Theo C. Wirth · 2026-10-02.</p>
+<p id="status" class="muted">Expected ZIP: 23,046 bytes · SHA-256 <code>7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3</code></p>
+</section>
+
+<section>
+<h2>Scope</h2>
+<p><span class="check">✓</span> Audited logical LOCK core and controlled source-derived Klipper subset.<br>
+<span class="check">✓</span> Masked-fault and dependency/epoch guards exercised in the declared software classes.<br>
+<span class="check">✓</span> Reproducibility manifest included.</p>
+<p class="muted">Not yet claimed: full Klipper daemon integration, MCU/trapq control, physical printer validation, hardware cache/memory counters, safety certification, or final LOCK v1 freeze.</p>
+</section>
+
+<footer>BUG BANG / 3SOS-C / TwistPhysics research · Theo C. Wirth · RC1</footer>
+
+<script>
+(function(){
+ const btn=document.getElementById('downloadBtn'), status=document.getElementById('status');
+ const expected='7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3';
+ const parts=[1,2,3,4,5,6].map(n=>'/research/lock-v1-rc1/zip.part'+String(n).padStart(2,'0')+'.b64');
+ function hex(buf){return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('')}
+ btn.addEventListener('click',async function(){
+  btn.disabled=true; status.textContent='Loading versioned package from GitHub Pages…';
+  try{
+   const texts=await Promise.all(parts.map(async u=>{const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw new Error(u+' '+r.status);return (await r.text()).trim()}));
+   const b64=texts.join('');
+   if(b64.length!==30728)throw new Error('base64 length '+b64.length);
+   const bin=atob(b64), bytes=new Uint8Array(bin.length);
+   for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+   if(bytes.length!==23046)throw new Error('ZIP size '+bytes.length);
+   const digest=hex(await crypto.subtle.digest('SHA-256',bytes));
+   if(digest!==expected)throw new Error('SHA-256 mismatch: '+digest);
+   const url=URL.createObjectURL(new Blob([bytes],{type:'application/zip'}));
+   const a=document.createElement('a');a.href=url;a.download='LOCK_KLIPPER_RC1_PUBLIC_2026-10-02.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+   status.innerHTML='Verified locally: <code>'+digest+'</code> · download started.';
+  }catch(e){status.textContent='Download verification failed: '+e.message}
+  finally{btn.disabled=false}
+ });
+})();
+</script>
 </main></body></html>
