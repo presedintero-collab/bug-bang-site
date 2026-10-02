@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.bug-bang-theory.org/3sos-c-developer-research-pack-v1.html">
+<title>LOCK v1 RC1 — Verified Execution Research Release</title>
+<style>
+:root{--bg:#05070d;--panel:#0b1220;--text:#f7ecd2;--muted:#c7b991;--gold:#f5d48a;--blue:#4bb7e8;--green:#9ff0c5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 10%,rgba(75,183,232,.15),transparent 32rem),var(--bg);color:var(--text);font:17px/1.7 Georgia,serif}
+main{max-width:980px;margin:auto;padding:8vh 24px}.kicker{color:var(--blue);text-transform:uppercase;letter-spacing:.18em;font:700 12px Arial,sans-serif}
+h1{font:700 clamp(42px,8vw,84px)/1.02 Georgia,serif;color:var(--gold);margin:.2em 0}.lead{font-size:1.2rem;color:#eadfbe}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:32px 0}.card{background:rgba(11,18,32,.84);border:1px solid rgba(245,212,138,.2);border-radius:18px;padding:18px}.card strong{display:block;color:var(--gold);font-size:1.6rem}.card span{color:var(--muted);font-size:.9rem}
+.note{border-left:3px solid var(--blue);padding:14px 18px;background:rgba(75,183,232,.07);color:#e9dcb9}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-block;padding:12px 18px;border:1px solid rgba(245,212,138,.35);border-radius:999px;color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.btn.primary{background:rgba(245,212,138,.1)}
+code{font-family:ui-monospace,Consolas,monospace;color:#c6efff}.small{color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body><main>
+<div class="kicker">3SOS-C research · LOCK v1 RC1</div>
+<h1>Verified execution,<br>measured with scope.</h1>
+<p class="lead">LOCK v1 RC1 is an audited research checkpoint for certified execution, conditional LOCK, exact fault evidence, dependency invalidation and bounded recovery. The controlled workbench is pinned to an official Klipper source commit.</p>
+<div class="grid">
+<div class="card"><strong>15.83%</strong><span>lower median wall time vs strict verification on every move</span></div>
+<div class="card"><strong>12 / 12</strong><span>paired timing rounds favored LOCK_TRACE</span></div>
+<div class="card"><strong>6,240 / 6,240</strong><span>masked compensating fault pairs detected</span></div>
+<div class="card"><strong>320 / 320</strong><span>declared single input-delta faults detected</span></div>
+</div>
+<div class="note"><b>Scope:</b> this is not a full Klipper daemon, MCU, printer or safety certification. LOCK v1 remains unfrozen pending hardware-counter and physical validation gates.</div>
+<div class="actions">
+<a class="btn primary" href="https://www.bug-bang-theory.org/3sos-c-developer-research-pack-v1.html">Open canonical release</a>
+<a class="btn" href="https://www.bug-bang-theory.org/3sos-c-developer-research-pack-v1.html#download">Download reproducibility ZIP</a>
+<a class="btn" href="https://github.com/Klipper3d/klipper/commit/461c4e3722c3a897fba1c6b3f0780a5315043842">Pinned Klipper commit</a>
+</div>
+<p class="small">Public bundle SHA-256: <code>7beb1092226941b3e7ccae732e90e8ec09b237a849486d8699a4f2d955e3e4a3</code></p>
+<p class="small">BUG BANG / 3SOS-C research project — Theo C. Wirth · 2026-10-02.</p>
+</main></body></html>
