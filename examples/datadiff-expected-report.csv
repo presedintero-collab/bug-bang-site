@@ -1,0 +1,4 @@
+﻿status,record_id,field,before,after
+changed,102,oras,Cluj,Brasov
+removed,103,,"{""id"":""103"",""client"":""Ioana Stan"",""oras"":""Bucuresti"",""status"":""activ""}",
+added,104,,,"{""id"":""104"",""client"":""Dan Marin"",""oras"":""Iasi"",""status"":""nou""}"
